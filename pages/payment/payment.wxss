@@ -1,0 +1,122 @@
+/* pages/payment/payment.wxss */
+.container{
+  background: #f6f6f6;
+  font-family: "微软雅黑";
+  margin-bottom: 90rpx;
+}
+.section{
+  margin-bottom: 20rpx;
+  background: #fff;
+  color: #666;
+  font-size: 30rpx;
+  position: relative;
+}
+.address{
+  padding: 30rpx;
+  padding-right: 75rpx;
+  border-top: 2rpx solid #f6f6f6;
+}
+.section .btn{
+  position: absolute;
+  width: 20rpx;
+  height: 30rpx;
+  top: calc(50% - 18rpx);
+  right: 30rpx;
+}
+.address .top{
+  padding-bottom: 10rpx;
+}
+.address .bot{
+  font-size: 26rpx;
+}
+.pro{
+  display: flex;
+  padding: 24rpx;
+  padding-left: 0;
+  margin-left: 24rpx;
+  border-bottom: 2rpx solid #f6f6f6;
+  width: 100%;
+}
+.pro:last-child{
+  border: none;
+}
+.pro image{
+  width: 120rpx;
+  height: 120rpx;
+  padding-right: 24rpx;
+}
+.pro .pro-r{
+  width: 560rpx;
+}
+.pro-r .name{
+  font-size: 30rpx;
+  color: #666;
+  height: 80rpx;
+  line-height: 40rpx;
+  overflow: hidden;
+}
+.pro-r .price{
+  color: red;
+  padding: 0;
+}
+.pro-r .count{
+  float: right;
+  font-size: 24rpx;
+  color: #aaa;
+  line-height: 40rpx;
+}
+.date{
+  padding: 30rpx;
+  padding-right: 75rpx;
+}
+.date text{
+  float: right;
+}
+.receipt,.message{
+  padding: 30rpx;
+  display: flex;
+}
+.receipt label{
+  width: 170rpx;
+  line-height: 50rpx;
+}
+.receipt input{
+  width: calc(100% - 170rpx);
+}
+.message label{
+  width: 170rpx;
+}
+.message textarea{
+  width: calc(100% - 170rpx);
+}
+.price {
+  padding: 30rpx;
+}
+.price .total{
+  text-align: right;
+}
+.price .total text{
+  color: red;
+  padding-left: 10rpx;
+}
+.fix{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  text-align: center;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 30rpx;
+  box-shadow:0 -10rpx 10rpx #ddd;
+}
+.left{
+  width: 50%;
+}
+.right{
+  width: 50%;
+  background: #44b549;
+  color: #fff;
+}

@@ -1,0 +1,91 @@
+/* pages/orderdetail/orderdetail.wxss */
+.container{
+  background: #f6f6f6;
+  font-family: "微软雅黑";
+}
+.status{
+  height: 70rpx;
+  line-height: 70rpx;
+  color: #96724A;
+  font-size: 26rpx;
+  padding: 0 30rpx;
+}
+.info{
+  background: #fff;
+  border-bottom: 2rpx solid #f6f6f6;
+  padding-left: 30rpx;
+}
+.info .item{
+  height: 90rpx;
+  line-height: 90rpx;
+  color: #555;
+  font-size: 26rpx;
+  padding-right: 30rpx;
+  border-bottom: 2rpx solid #f6f6f6;
+}
+.info .item:last-child{
+  border: none;
+}
+.info .item text{
+  display: inline-block;
+  width: 200rpx;
+  color: #aaa;
+}
+.pros{
+  background: #fff;
+}
+.pro{
+  display: flex;
+  padding: 24rpx;
+  padding-left: 0;
+  margin-left: 24rpx;
+  border-bottom: 2rpx solid #f6f6f6;
+  width: 100%;
+}
+.pro:last-child{
+  border: none;
+}
+.pro image{
+  width: 120rpx;
+  height: 120rpx;
+  padding-right: 24rpx;
+}
+.pro .pro-r{
+  width: 560rpx;
+}
+.pro-r .name{
+  font-size: 30rpx;
+  color: #666;
+  height: 80rpx;
+  line-height: 40rpx;
+  overflow: hidden;
+}
+.pro-r .count{
+  text-align: right;
+  font-size: 24rpx;
+  color: #aaa;
+  line-height: 40rpx;
+}
+.price{
+  height: 80rpx;
+  line-height: 80rpx;
+  color: red;
+  font-size: 26rpx;
+  padding: 0 30rpx;
+  background: #fff;
+  text-align: right;
+  border-top: 2rpx solid #f6f6f6;
+}
+.price text{
+  display: inline-block;
+  width: 200rpx;
+  color: #555;
+  text-align: left;
+}
+.footer .item{
+  height: 70rpx;
+  line-height: 70rpx;
+  color: #aaa;
+  font-size: 26rpx;
+  padding: 0 30rpx;
+}

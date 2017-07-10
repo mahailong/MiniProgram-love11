@@ -1,0 +1,40 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/goods/goods",
+    "pages/order/order",
+    "pages/payment/payment",
+    "pages/category/category",
+    "pages/orderdetail/orderdetail"
+
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#96724a",
+    "selectedColor": "#96724a",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "images/icon/nav1.png",
+        "selectedIconPath": "images/icon/nav1.png",
+        "text": "首页"
+      },{
+        "pagePath": "pages/category/category",
+        "iconPath": "images/icon/nav2.png",
+        "selectedIconPath": "images/icon/nav2.png",
+        "text": "分类"
+      },{
+        "pagePath": "pages/order/order",
+        "iconPath": "images/icon/nav3.png",
+        "selectedIconPath": "images/icon/nav3.png",
+        "text": "订单"
+      }
+    ]
+  }
+}

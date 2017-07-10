@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<view class="container">
+  <!--轮播图-->
+  <swiper
+    class="banner"
+    indicator-dots="true"
+    autoplay="true"
+    circular="true"
+    indicator-color="#b89988"
+    indicator-active-color="#5c3723">
+    <block wx:for="{{banners}}" wx:key="{{index}}">
+      <swiper-item>
+        <navigator url="/pages/goods/goods?id={{item.id}}">
+          <image src="{{item.src}}" class="full-image" mode="scaleToFill"/>
+        </navigator>
+      </swiper-item>
+    </block>
+  </swiper>
+  <image src="../../images/bg0.png" class="full-image" mode="widthFix"/>
+  <view class="list">
+    <block wx:for="{{recommends}}" wx:key="{{index}}">
+      <navigator url="/pages/goods/goods?id={{item.id}}" class="list-item">
+        <image src="{{item.src}}" class="full-image" mode="widthFix"/>
+      </navigator>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,56 @@
+<!--pages/goods/goods.wxml-->
+<view class="container">
+  <!--轮播图-->
+  <swiper
+    class="banner"
+    indicator-dots="true"
+    autoplay="true"
+    circular="true"
+    indicator-color="#b89988"
+    indicator-active-color="#5c3723">
+    <block wx:for="{{data.banners}}" wx:key="{{index}}">
+      <swiper-item>
+        <navigator url="/pages/goods/goods?id={{item.id}}">
+          <image src="{{item.src}}" class="full-image" mode="scaleToFill"/>
+        </navigator>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="name">
+    <view class="en">{{data.en}}</view>
+    <view class="ch">{{data.ch}}</view>
+    <view class="price">￥{{data.price[tab]}}.00</view>
+  </view>
+  <view class="tab">
+    <view class="tab-item">
+      <image src="../../images/icon/dgxq-2.png" mode="widthFix"/>
+      <text>{{data.format[tab].area}}</text>
+    </view>
+    <view class="tab-item">
+      <image src="../../images/icon/dgxq-3.png" mode="widthFix"/>
+      <text>适合{{data.format[tab].people}}人分享</text>
+    </view>
+    <view class="tab-item">
+      <image src="../../images/icon/dgxq-4.png" mode="widthFix"/>
+      <text>附赠{{data.format[tab].tableware}}套餐具</text>
+    </view>
+    <view class="tab-item">
+      <image src="../../images/icon/dgxq-5.png" mode="widthFix"/>
+      <text>需提前{{data.format[tab].time}}小时预订</text>
+    </view>
+  </view>
+  <view class="weight">
+    <view class="title">净重：</view>
+    <view class="wt-content">
+      <view bindtap="changeTab" id="0" class="wt-item {{tab==0?'active':''}}">1.0磅</view>
+      <view bindtap="changeTab" id="1" class="wt-item {{tab==1?'active':''}}">2.0磅</view>
+      <view bindtap="changeTab" id="2" class="wt-item {{tab==2?'active':''}}">3.0磅</view>
+      <view bindtap="changeTab" id="3" class="wt-item {{tab==3?'active':''}}">5.0磅</view>
+    </view>
+  </view>
+  <view class="detail">
+    <image src="http://www.love11.com/images/upload/Image/%E7%BC%A4%E7%BA%B7%E4%B9%9D%E5%AE%AB%E6%A0%BC_01.jpg"  mode="widthFix"/>
+    <image src="http://www.love11.com/images/upload/Image/%E7%BC%A4%E7%BA%B7%E4%B9%9D%E5%AE%AB%E6%A0%BC_02(4).jpg"  mode="widthFix"/>
+  </view>
+  <view class="buy" bindtap="quickBuy">立即订购</view>
+</view>

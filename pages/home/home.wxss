@@ -1,0 +1,14 @@
+/**index.wxss**/
+.banner{
+  height: 475rpx;
+}
+.list{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 30rpx;
+}
+.list-item{
+  width: 330rpx;
+  padding-bottom: 20rpx;
+}

@@ -1,0 +1,56 @@
+<!--pages/payment/payment.wxml-->
+<view class="container">
+  <view class="section address" bindtap="bindAddressCahnge">
+    <view wx:if="{{address.userName}}">
+      <view class="top">{{address.userName}} {{address.telNumber}}</view>
+      <view class="bot">{{address.cityName}}{{address.countyName}}{{address.detailInfo}}</view>
+    </view>
+    <view wx:else >请选择地址</view>
+    <image class="btn" src="../../images/icon/arrow-r1.png" mode="scaleToFill"/>
+  </view>
+  <view class="section date">
+    <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+      <view class="item">
+        选择日期: <text>{{date}}</text>
+      </view>
+    </picker>
+    <image class="btn" src="../../images/icon/arrow-r1.png" mode="scaleToFill"/>
+  </view>
+  <view class="section date">
+    <picker mode="time" value="{{time}}" bindchange="bindTimeChange">
+      <view class="item">
+        配送时间: <text>{{time}}</text>
+      </view>
+    </picker>
+    <image class="btn" src="../../images/icon/arrow-r1.png" mode="scaleToFill"/>
+  </view>
+  <view class="section pros">
+    <block wx:for="{{prolist}}" wx:key="{{index}}" wx:for-item="pro">
+      <view class="pro">
+        <image src="{{pro.url}}" mode="aspectFill"/>
+        <view class="pro-r">
+          <view class="name">{{pro.name}}</view>
+          <view class="bot">
+            <text class="price">￥{{pro.price}}.00</text>
+            <text class="count">{{pro.count}}件</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="section price">
+    <view class="total">实付金额：<text>￥{{total}}.00</text></view>
+  </view>
+  <view class="section receipt">
+    <label for="receipt">发票抬头：</label>
+    <input name="receipt" placeholder="如需发票请输入发票抬头" />
+  </view>
+  <view class="section message">
+    <label for="message">订单附言：</label>
+    <textarea name="message" placeholder="请输入订单附言" />
+  </view>
+  <view class="fix">
+    <view class="left" bindtap="bindCashOnDelivery">货到付款</view>
+    <view class="right" bindtap="bindweiChatPay">微信支付</view>
+  </view>
+</view>

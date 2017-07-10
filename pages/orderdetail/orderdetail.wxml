@@ -1,0 +1,38 @@
+<!--pages/orderdetail/orderdetail.wxml-->
+<view class="container">
+  <view class="status">{{status}}</view>
+  <view class="info">
+    <view class="item">
+      <text>订单号：</text>{{num}}
+    </view>
+    <view class="item">
+      <text>收货人：</text>{{name}}
+    </view>
+    <view class="item">
+      <text>收货电话：</text>{{mobile}}
+    </view>
+    <view class="item">
+      <text>收货电话：</text>{{addr}}
+    </view>
+    <view class="item">
+      <text>送达时间：</text>{{gettime}}
+    </view>
+  </view>
+  <view class="pros">
+    <block wx:for="{{prolist}}" wx:key="{{index}}" wx:for-item="pro">
+      <view class="pro">
+        <image src="{{pro.url}}" mode="aspectFill"/>
+        <view class="pro-r">
+          <view class="name">{{pro.name}}</view>
+          <view class="count">{{pro.count}}件</view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="price"><text>实付款</text>￥{{price}}</view>
+  <view class="footer">
+    <view class="item">
+      <text>下单时间：</text>{{subtime}}
+    </view>  
+  </view>
+</view>
